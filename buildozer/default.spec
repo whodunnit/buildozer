@@ -129,6 +129,9 @@ fullscreen = 1
 # (list) Android application meta-data to set (key=value format)
 #android.meta_data =
 
+# (str) Android billing
+#android.with_billing = BILLING_PUBKEY
+
 # (list) Android library project to add (will be added in the
 # project.properties automatically.)
 #android.library_references =

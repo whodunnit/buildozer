@@ -583,6 +583,11 @@ class TargetAndroid(Target):
             meta = '{}={}'.format(key.strip(), value.strip())
             build_cmd += ' --meta-data "{}"'.format(meta)
 
+	# with-billing
+        billing_data = config.getlistvalues('app', 'android.with_billing', [])
+        for bill in billing_data:
+            build_cmd += ' --with-billing "{}"'.format(bill)
+
         # add extra Java jar files
         add_jars = config.getlist('app', 'android.add_jars', [])
         for pattern in add_jars:
